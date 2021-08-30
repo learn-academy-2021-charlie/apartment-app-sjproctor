@@ -1,24 +1,24 @@
-# README
+# Apartment App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Setup
+- Made a Rails app, and db
+- $ rails new apartment_app -d postgresql -T
+- $ cd apartment_app
+- $ rails db:create
+- Added the remote from github, created default branch
 
-Things you may want to cover:
+### Installs
+- Branch: adding-devise
+- Adding RSpec:
+  - $ bundle add rspec-rails
+  - $ rails generate rspec:install
+- Adding Devise:
+- $ bundle add devise
+- $ rails generate devise:install
+- $ rails generate devise User
+- $ rails db:migrate
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### Apartment Model
+- $ rails g resource Apartment street:string city:string state:string manager:string email:string price:string bedrooms:integer bathrooms:integer pets:string user_id:integer
+- Define relationship between User and Apartment
+- Created seeds
