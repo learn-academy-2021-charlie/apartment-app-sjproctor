@@ -86,19 +86,19 @@
   - Route to Index (done)
   - Use mock data to display app apartments (done)
     - Styling (done)
-  - Create a show page with mock data
-  - Routing to show with just one apartment using mock data
-    - Styling
-  - Add endpoint for index
-  - Add specs for index endpoint
-  - Add validation for presence of all attributes
-  - Add model specs for validations
+  - Create a show page with mock data (done)
+  - Routing to show with just one apartment using mock data (done)
+    - Styling (done)
+  - Add endpoint for index (done)
+  - Add specs for index endpoint (done)
   - Add fetch request for index
   - Remove mock data
 
 #### Create
 - Story: As a logged in user, I can go to a new apartment page with a form and create a new apartment
-  - Create, only if you are logged_in, Desive
+  - Create, only if you are logged_in, Devise
+  - Add validation for presence of all attributes
+  - Add model specs for validations
 
 #### Update
 - Story: As a logged in user, I can edit the information for any apartment I have created, but I cannot edit the information for apartments that belong to someone else

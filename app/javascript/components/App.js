@@ -10,14 +10,21 @@ import {
   Switch
 } from 'react-router-dom'
 
-import mockApartments from './mockApartments.js'
-
 class App extends Component {
   constructor(props){
     super(props)
     this.state = {
-      apartments: mockApartments
+      apartments: []
     }
+  }
+  componentDidMount(){
+    this.readApartment()
+  }
+  readApartment = () => {
+    fetch("/apartments")
+    .then(response => response.json())
+    .then(payload => this.setState({apartments: payload}))
+    .catch(errors => console.log("index errors:", errors))
   }
   render() {
     const {
