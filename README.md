@@ -43,22 +43,22 @@
 ### User Stories
 
 #### Devise and Header Stories
-- Story: As a un-registered guest, I can go to registration page with a form and register as a new user
+- Story: As a un-registered guest, I can go to registration page with a form and register as a new user (done)
   - Devise, navigation from Header component
-- Story: As a registered user who has not logged in, I can go to a login page
+- Story: As a registered user who has not logged in, I can go to a login page (done)
   - Devise, navigation from Header component
-- Story: As a logged in user, I should be able to log out
+- Story: As a logged in user, I should be able to log out (done)
   - Devise, navigation from Header component
-- Story: As an un-registered guest on the website, I can see a header element at the top of each page containing navigation to the other pages
+- Story: As an un-registered guest on the website, I can see a header element at the top of each page containing navigation to the other pages (done)
   - Header component
 - Process:
   - Header component (done)
-  - Styling (added to the TODO items)
+  - Styling (done)
   - Navigation to Devise (done)
   - Navigation Index (done)
     - Create index page, basic code
     - Define the route to index page
-  - Testing the Header
+  - Testing the Header (done)
     - $ yarn add jest
     - $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
     - Add this to the package.json:
@@ -69,21 +69,36 @@
       ]
     }
     ```
-- TODO: More styling on the header
+- Styling on the header (done)
   - Styles for logo: gray: #D2D2CF, red: #8B0000
+  - Updated color schemes
+- Added image to Home page (done)
 
 
 #### Read
 - Story: As an un-registered guest on the website, I can go to a web page and see a list of available apartments. Apartments have: a street designation, a city, state, a manager's name, manager's contact email, monthly rental price, bedrooms, bathrooms, and whether they allow pets
   - Index
-    - Have an index page but nothing on it yet
-    -
 - Story: As an un-registered guest on the website, I can click on an apartment to view its details
   - Show
+- Process:
+  - Branch: read-functionality
+  - Have an index page but nothing on it yet (done)
+  - Route to Index (done)
+  - Use mock data to display app apartments (done)
+    - Styling (done)
+  - Create a show page with mock data (done)
+  - Routing to show with just one apartment using mock data (done)
+    - Styling (done)
+  - Add endpoint for index (done)
+  - Add specs for index endpoint (done)
+  - Add fetch request for index
+  - Remove mock data
 
 #### Create
 - Story: As a logged in user, I can go to a new apartment page with a form and create a new apartment
-  - Create, only if you are logged_in, Desive
+  - Create, only if you are logged_in, Devise
+  - Add validation for presence of all attributes
+  - Add model specs for validations
 
 #### Update
 - Story: As a logged in user, I can edit the information for any apartment I have created, but I cannot edit the information for apartments that belong to someone else
