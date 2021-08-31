@@ -5,15 +5,24 @@
 
 /* ---HEADER--- */
 header {
-  background-color: #EBE0D0;
   display: flex;
   justify-content: space-between;
+  background-color: #D2D2CF;
 }
-
-.nav-links {
+.nav-bar {
   display: flex;
-  flex-direction: row;
   align-items: flex-end;
-  padding-right: 50px;
+  padding-bottom: 10px;
+}
+.nav-link {
   margin: 10px;
+  color: #8B0000;
+  text-decoration: none;
+}
+.nav-link:hover {
+  text-decoration: underline;
+}
+.logo {
+  height: 150px;
+  margin-left: 20px;
 }

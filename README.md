@@ -62,14 +62,15 @@
     - $ yarn add jest
     - $ yarn add -D enzyme react-test-renderer enzyme-adapter-react-16
     - Add this to the package.json:
-     "jest": {
-        "roots": [
-          "app/javascript/components"
-        ]
-      }
-
-TODO: More styling on the header
-TODO: Testing the header
+    ```
+    "jest": {
+      "roots": [
+        "app/javascript/components"
+      ]
+    }
+    ```
+- TODO: More styling on the header
+  - Styles for logo: gray: #D2D2CF, red: #8B0000
 
 
 #### Read
