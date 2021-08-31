@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
 import ApartmentIndex from './pages/ApartmentIndex'
+import ApartmentShow from './pages/ApartmentShow'
 import Home from './pages/Home'
 
 import {
@@ -37,6 +38,11 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/apartmentIndex" render={(props) => {
             return <ApartmentIndex apartments={this.state.apartments} />
+          }}/>
+          <Route path="/apartmentShow/:id" render={ (props) => {
+            let id = +props.match.params.id
+            let apartment = this.state.apartments.find(a => a.id === id)
+            return <ApartmentShow apartment={apartment} />
           }}/>
         </Switch>
       </Router>

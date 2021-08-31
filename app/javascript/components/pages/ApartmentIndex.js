@@ -24,7 +24,7 @@ class ApartmentIndex extends Component {
                       {apartment.city}, {apartment.state}
                   </div>
                   <br />
-                  <NavLink to={`/apartment/${apartment.id}`}>
+                  <NavLink to={`/apartmentShow/${apartment.id}`}>
                     <Button>
                       More Info
                     </Button>

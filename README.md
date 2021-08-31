@@ -82,13 +82,19 @@
   - Show
 - Process:
   - Branch: read-functionality
-  - Have an index page but nothing on it yet
-  - Route to Index
-  - Use mock data to display app apartments
-    - Styling
-  - Create a show page
+  - Have an index page but nothing on it yet (done)
+  - Route to Index (done)
+  - Use mock data to display app apartments (done)
+    - Styling (done)
+  - Create a show page with mock data
   - Routing to show with just one apartment using mock data
     - Styling
+  - Add endpoint for index
+  - Add specs for index endpoint
+  - Add validation for presence of all attributes
+  - Add model specs for validations
+  - Add fetch request for index
+  - Remove mock data
 
 #### Create
 - Story: As a logged in user, I can go to a new apartment page with a form and create a new apartment
