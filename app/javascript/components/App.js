@@ -8,8 +8,17 @@ import {
   Switch
 } from 'react-router-dom'
 
+import mockApartments from './mockApartments.js'
+
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      apartments: mockApartments
+    }
+  }
   render() {
+    console.log(this.state.mockApartments)
     const {
       logged_in,
       current_user,
@@ -25,7 +34,9 @@ class App extends Component {
           sign_out_route={sign_out_route}
         />
         <Switch>
-          <Route path="/apartmentIndex" component={ApartmentIndex}/>
+          <Route path="/apartmentIndex" render={(props) => {
+            <ApartmentIndex apartments={this.state.apartments} />
+          }} />
         </Switch>
       </Router>
     )
