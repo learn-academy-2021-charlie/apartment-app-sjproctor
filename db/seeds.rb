@@ -3,6 +3,11 @@ users = [
     email: 'testing@test.com',
     password: 'testing123',
     password_confirmation: 'testing123'
+  },
+  {
+    email: 'snow@mail.com',
+    password: 'testing123',
+    password_confirmation: 'testing123'
   }
 ]
 

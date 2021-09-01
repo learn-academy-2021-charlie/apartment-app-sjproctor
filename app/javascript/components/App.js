@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Header from './components/Header'
 import ApartmentIndex from './pages/ApartmentIndex'
 import ApartmentShow from './pages/ApartmentShow'
+import ApartmentNew from './pages/ApartmentNew'
 import Home from './pages/Home'
 
 import {
@@ -26,21 +27,13 @@ class App extends Component {
     .then(payload => this.setState({apartments: payload}))
     .catch(errors => console.log("index errors:", errors))
   }
+  createApartment = (newApartment) => {
+    console.log(newApartment)
+  }
   render() {
-    const {
-      logged_in,
-      current_user,
-      new_user_route,
-      sign_in_route,
-      sign_out_route
-    } = this.props
     return (
       <Router>
-        <Header
-          logged_in={logged_in}
-          sign_in_route={sign_in_route}
-          sign_out_route={sign_out_route}
-        />
+        <Header {...this.props} />
         <Switch>
           <Route exact path="/" component={Home} />
           <Route path="/apartmentIndex" render={(props) => {
@@ -51,6 +44,11 @@ class App extends Component {
             let apartment = this.state.apartments.find(a => a.id === id)
             return <ApartmentShow apartment={apartment} />
           }}/>
+          {this.props.logged_in &&
+            <Route path="/apartmentNew" render={(props) => {
+              return <ApartmentNew createApartment={this.createApartment} current_user={this.props.current_user} />
+            }}/>
+          }
         </Switch>
       </Router>
     )
