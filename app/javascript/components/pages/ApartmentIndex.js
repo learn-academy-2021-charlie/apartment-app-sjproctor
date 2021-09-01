@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
 import { NavLink } from 'react-router-dom'
-import { faHome, faCity } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faHome, faCity } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class ApartmentIndex extends Component {
   render() {

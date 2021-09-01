@@ -91,12 +91,21 @@
     - Styling (done)
   - Add endpoint for index (done)
   - Add specs for index endpoint (done)
-  - Add fetch request for index
-  - Remove mock data
+  - Add fetch request for index (done)
+  - Remove mock data (done)
+  - Added Font Awesome Icons (done)
+    - $ `yarn add @fortawesome/fontawesome-svg-core`
+    - $ `yarn add @fortawesome/free-solid-svg-icons`
+    - $ `yarn add @fortawesome/react-fontawesome`
+    - import { faHome, faCity } from "@fortawesome/free-solid-svg-icons";
+    - import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+    - In JSX: <FontAwesomeIcon icon={faHome} />
+    - In JSX: <FontAwesomeIcon icon={faCity} />
 
 #### Create
 - Story: As a logged in user, I can go to a new apartment page with a form and create a new apartment
-  - Create, only if you are logged_in, Devise
+  - Create, only if you are logged_in, Devise, link is only in the nav if you are logged in
+  - Add route for newapartment that is only available to users who are logged in
   - Add validation for presence of all attributes
   - Add model specs for validations
 
