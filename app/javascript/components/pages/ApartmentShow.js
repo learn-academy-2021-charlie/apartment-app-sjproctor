@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 class ApartmentShow extends Component {
   render() {
     const { apartment } = this.props
-    console.log(apartment)
     return (
       <div className="page-body">
         <h3>Apartment Features</h3>

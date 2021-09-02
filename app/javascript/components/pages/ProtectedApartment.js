@@ -4,11 +4,11 @@ import { NavLink } from 'react-router-dom'
 import { faHome, faCity } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
-class ApartmentIndex extends Component {
+class ProtectedApartment extends Component {
   render() {
     return (
       <div className="page-body">
-        <h3>All the Apartments</h3>
+        <h3>My Apartments</h3>
         <br />
         <br />
         <Row className="cards">
@@ -24,7 +24,7 @@ class ApartmentIndex extends Component {
                     {apartment.city}, {apartment.state}
                 </div>
                 <br />
-                <NavLink to={`/apartmentshow/${apartment.id}`}>
+                <NavLink to={`/apartmentShow/${apartment.id}`}>
                   <Button>
                     More Info
                   </Button>
@@ -37,4 +37,4 @@ class ApartmentIndex extends Component {
     )
   }
 }
-export default ApartmentIndex
+export default ProtectedApartment

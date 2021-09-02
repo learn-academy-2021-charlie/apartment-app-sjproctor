@@ -16,7 +16,7 @@ class Header extends Component {
         </NavLink>
         <div className="nav-bar">
           <ul>
-            <NavLink to="/apartmentIndex" className="nav-link">See All the Apartments</NavLink>
+            <NavLink to="/apartmentindex" className="nav-link">See All the Apartments</NavLink>
           </ul>
           <ul>
             {logged_in &&
@@ -28,7 +28,12 @@ class Header extends Component {
           </ul>
           <ul>
             {logged_in &&
-              <NavLink to="/apartmentNew" className="nav-link">Add an Apartment</NavLink>
+              <NavLink to="/apartmentnew" className="nav-link">Add an Apartment</NavLink>
+            }
+          </ul>
+          <ul>
+            {logged_in &&
+              <NavLink to="/myapartments" className="nav-link">My Apartments</NavLink>
             }
           </ul>
         </div>
