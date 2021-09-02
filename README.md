@@ -104,10 +104,20 @@
 
 #### Create
 - Story: As a logged in user, I can go to a new apartment page with a form and create a new apartment
-  - Create, only if you are logged_in, Devise, link is only in the nav if you are logged in
-  - Add route for newapartment that is only available to users who are logged in
-  - Add validation for presence of all attributes
-  - Add model specs for validations
+  - Create, only if you are logged_in, Devise, link is only in the nav if you are logged in (done)
+  - Add route for newapartment that is only available to users who are logged in (done)
+  - Add create controller method and strong params (done)
+  - Add request specs for create (done)
+  - Add validation for presence of all attributes (done)
+  - Add model specs for validations (done)
+
+#### Protected Show
+- Just the apartments that belong to the current user
+  - MyApartment component
+  - Route that is protected
+  - Conditionally rendered link
+  - Filter state object based on current user id
+  - Use code from index to make the view for protected index
 
 #### Update
 - Story: As a logged in user, I can edit the information for any apartment I have created, but I cannot edit the information for apartments that belong to someone else
