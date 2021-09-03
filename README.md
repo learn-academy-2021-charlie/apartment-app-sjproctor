@@ -120,5 +120,12 @@
   - Use code from index to make the view for protected index
 
 #### Update
-- Story: As a logged in user, I can edit the information for any apartment I have created, but I cannot edit the information for apartments that belong to someone else
+- Story: As a logged in user, I can edit the information for any apartment I have created, but I cannot edit the information for apartments that belong to someone else (done)
   - Edit, only apartments with the foreign key of the current user
+  - Controller method (done)
+  - Request specs (done)
+  - Edit form page (done)
+    - Prepopulate forms with data (done)
+  - Spec for edit (done)
+  - Button from protected index (done)
+  - Reroute to myapartments (done)

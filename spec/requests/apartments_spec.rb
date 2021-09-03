@@ -230,4 +230,44 @@ RSpec.describe "Apartments", type: :request do
       expect(response).to have_http_status(422)
     end
   end
+
+  # -----update-----
+  describe 'PUT /cats' do
+    it 'edits an apartment' do
+      apartment = Apartment.create(
+        street: '221B Baker Street',
+        city: 'London',
+        state: 'England',
+        manager: 'Ms. Hudson',
+        email: 'mzhud@email.com',
+        price: '1000',
+        bedrooms: 2,
+        bathrooms: 2,
+        pets: 'no',
+        user_id: user.id
+        )
+
+      update_apartment_params = {
+        apartment: {
+          street: '221Z Baker Street',
+          city: 'London',
+          state: 'England',
+          manager: 'Ms. Hudson',
+          email: 'mzhud@email.com',
+          price: '1500',
+          bedrooms: 2,
+          bathrooms: 2,
+          pets: 'yes',
+          user_id: user.id
+        }
+      }
+      patch "/apartments/#{apartment.id}", params: update_apartment_params
+
+      updated_apartment_response = JSON.parse(response.body)
+      expect(updated_apartment_response['street']).to eq '221Z Baker Street'
+      expect(updated_apartment_response['price']).to eq '1500'
+      expect(updated_apartment_response['pets']).to eq 'yes'
+      expect(response).to have_http_status(200)
+    end
+  end
 end

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Header from './components/Header'
+import ApartmentEdit from './pages/ApartmentEdit'
 import ApartmentIndex from './pages/ApartmentIndex'
 import ApartmentShow from './pages/ApartmentShow'
 import ApartmentNew from './pages/ApartmentNew'
@@ -44,6 +45,23 @@ class App extends Component {
     .then(() => this.readApartment())
     .catch(errors => console.log("create errors:", errors))
   }
+  editApartment = (apartment, id) => {
+    fetch(`/apartments/${id}`, {
+      body: JSON.stringify(apartment),
+      headers: {
+        "Content-Type": "application/json"
+      },
+      method: "PATCH"
+    })
+    .then(response => {
+      if(response.status === 422){
+        alert("There is something wrong with your submission.")
+      }
+      return response.json()
+    })
+    .then(() => this.readApartment())
+    .catch(errors => console.log("edit errors:", errors))
+  }
   render() {
     return (
       <Router>
@@ -67,6 +85,18 @@ class App extends Component {
             <Route path="/myapartments" render={(props) => {
               let apartments = this.state.apartments.filter(a => a.id === this.props.current_user.id)
               return <ProtectedApartment apartments={apartments} />
+            }}/>
+          }
+          {this.props.logged_in &&
+            <Route path="/apartmentedit/:id" render={(props) => {
+              let apartment = this.state.apartments.find(apartment => apartment.id === +props.match.params.id)
+              return (
+                <ApartmentEdit
+                  editApartment={this.editApartment}
+                  current_user={this.props.current_user}
+                  apartment={apartment}
+                />
+              )
             }}/>
           }
         </Switch>

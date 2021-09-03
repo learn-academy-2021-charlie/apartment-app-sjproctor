@@ -24,10 +24,15 @@ class ProtectedApartment extends Component {
                     {apartment.city}, {apartment.state}
                 </div>
                 <br />
-                <NavLink to={`/apartmentShow/${apartment.id}`}>
+                <NavLink to={`/apartmentshow/${apartment.id}`}>
                   <Button>
                     More Info
                   </Button>
+                </NavLink>
+                <br />
+                <br />
+                <NavLink to={`/apartmentedit/${apartment.id}`}>
+                  <Button>Edit Listing</Button>
                 </NavLink>
               </Card>
             )
