@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Button, Card, CardTitle, Col, Row } from 'reactstrap'
+import { NavLink } from 'react-router-dom'
 import { faHome, faCity, faUser, faEnvelope, faDollarSign, faBed, faToiletPaper, faPaw } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -26,6 +27,10 @@ class ApartmentShow extends Component {
               <h5><FontAwesomeIcon icon={faBed} className="fa-icon" />Bedrooms: {apartment.bedrooms}</h5>
               <h5><FontAwesomeIcon icon={faToiletPaper} className="fa-icon" />Bathrooms: {apartment.bathrooms}</h5>
               <h5><FontAwesomeIcon icon={faPaw} className="fa-icon" />Pets Allowed: {apartment.pets}</h5>
+              <br />
+              <NavLink to="/apartmentindex">
+                <Button>Back</Button>
+              </NavLink>
             </div>
           }
         </div>
